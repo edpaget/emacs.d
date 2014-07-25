@@ -4,6 +4,9 @@
 (prefer-coding-system 'utf-8)
 (load-library "iso-transl")
 
+;; TABS SUCK
+(setq-default indent-tabs-mode nil)
+
 ;; Remove extraneous UI elements
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
@@ -50,7 +53,8 @@
 				ed-magit
 				ed-theme
 				ed-projectile
-				ed-ido))
+				ed-ido
+				ed-ruby))
 
 (dolist (file ed-package-full)
   (require file))
