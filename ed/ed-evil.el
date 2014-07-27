@@ -19,6 +19,11 @@
 
 (evil-mode t)
 
+(evil-set-initial-state 'magit-log-edit-mode 'emacs)
+(evil-set-initial-state 'nav-mode 'emacs)
+(evil-set-initial-state 'grep-mode 'emacs)
+(evil-set-initial-state 'ibuffer-mode 'normal)
+
 (evil-define-command cofi/maybe-exit ()
   :repeat change
   (interactive)
@@ -36,5 +41,7 @@
                                                (list evt))))))))
 
 (define-key evil-insert-state-map "k" #'cofi/maybe-exit)
+
+(evil-add-hjkl-bindings occur-mode 'emacs)
 
 (provide 'ed-evil)

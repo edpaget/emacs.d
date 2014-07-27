@@ -16,6 +16,14 @@
   (when (not (package-installed-p pkg))
     (package-install pkg)))
 
+;;  fix the PATH variable
+ (defun set-exec-path-from-shell-PATH ()
+   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
+       (setenv "PATH" path-from-shell)
+           (setq exec-path (split-string path-from-shell path-separator))))
+
+(when window-system (set-exec-path-from-shell-PATH))
+
 ;; list the repositories containing them
 (require 'package)
 (add-to-list 'package-archives
@@ -25,11 +33,6 @@
 ; fetch the list of packages available
 (unless package-archive-contents
   (package-refresh-contents))
-
-(require 'exec-path-from-shell)
-(setq exec-path-from-shell-arguments (delete "-i" exec-path-from-shell-arguments))
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -51,10 +54,12 @@
 (setq ed-package-full
 			'(ed-evil
 				ed-magit
+        ed-powerline
 				ed-theme
 				ed-projectile
 				ed-ido
-				ed-ruby))
+				ed-ruby
+        ed-java))
 
 (dolist (file ed-package-full)
   (require file))
