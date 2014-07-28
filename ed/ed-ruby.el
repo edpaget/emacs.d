@@ -3,6 +3,7 @@
 (require-package 'rvm)
 
 (add-hook 'ruby-mode-hook 'rvm-activate-corresponding-ruby)
+(setenv "JRUBY_OPTS" "--2.0")
 
 (require-package 'rinari)
 
@@ -15,6 +16,7 @@
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 
 (require-package 'rspec-mode)
+(add-hook 'ruby-mode-hook 'rspec-mode)
 
 (evil-leader/set-key-for-mode 'rspec-mode "v" 'rspec-verify
   "a" 'rspec-verify-all

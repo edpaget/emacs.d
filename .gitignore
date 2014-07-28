@@ -11,3 +11,5 @@ places
 .org*
 init.el~
 projectile*
+*~
+#*#
