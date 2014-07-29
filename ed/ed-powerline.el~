@@ -1,0 +1,4 @@
+;; Powerline config
+
+(require 'powerline)
+(powerline-default-theme)

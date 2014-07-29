@@ -1,0 +1,106 @@
+;; Object blood_bowl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "blood_bowl/"
+  :tables (list 
+   (semanticdb-table "App.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("com.edpaget.blood_bowl" package nil (reparse-symbol package_declaration) [1 32])
+            ("App" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameter) [110 123]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [85 183]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [61 185]))          
+    :file "App.java"
+    :pointmax 186
+    :fsize 185
+    :lastmodtime '(21461 32822 611550 6000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Board.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("com.edpaget.blood_bowl" package nil (reparse-symbol package_declaration) [1 32])
+            ("java.util.List" include nil (reparse-symbol import_declaration) [34 56])
+            ("java.util.ArrayList" include nil (reparse-symbol import_declaration) [57 84])
+            ("Board" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("BOARD_WIDTH" variable (:type "int") (reparse-symbol field_declaration) [111 132])
+                    ("BOARD_LENGTH" variable (:type "int") (reparse-symbol field_declaration) [137 159])
+                    ("nodes" variable
+                       (:typemodifiers ("private")
+                        :type "List<List<BoardNode>>")
+                        (reparse-symbol field_declaration) [164 200])
+                    ("Board" function (:constructor-flag t) (reparse-symbol constructor_declaration) [206 627])
+                    ("neighbors_of" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("node" variable (:type "BoardNode") (reparse-symbol formal_parameter) [669 683]))                          
+                        :type "List<BoardNode>")
+                        (reparse-symbol method_declaration) [633 696]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [86 698]))          
+    :file "Board.java"
+    :pointmax 699
+    :fsize 698
+    :lastmodtime '(21461 48642 994125 276000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "BoardNode.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("BoardNode" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("x" variable
+                       (:typemodifiers ("public" "final")
+                        :type "int")
+                        (reparse-symbol field_declaration) [66 85])
+                    ("y" variable
+                       (:typemodifiers ("public" "final")
+                        :type "int")
+                        (reparse-symbol field_declaration) [90 109])
+                    ("board" variable
+                       (:typemodifiers ("private" "final")
+                        :type "Board")
+                        (reparse-symbol field_declaration) [114 140])
+                    ("player" variable
+                       (:typemodifiers ("public")
+                        :type "Player")
+                        (reparse-symbol field_declaration) [145 166])
+                    ("BoardNode" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("board" variable (:type "Board") (reparse-symbol formal_parameter) [182 193])
+                            ("x" variable (:type "int") (reparse-symbol formal_parameter) [195 200])
+                            ("y" variable (:type "int") (reparse-symbol formal_parameter) [202 207]))                          )
+                        (reparse-symbol constructor_declaration) [172 316])
+                    ("in_tackle_zone" function (:type "boolean") (reparse-symbol method_declaration) [322 469])
+                    ("tackle_zone_on" function
+                       (:arguments 
+                          ( ("node" variable (:type "BoardNode") (reparse-symbol formal_parameter) [498 512]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [475 689]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [37 691]))          
+    :file "BoardNode.java"
+    :pointmax 690
+    :fsize 692
+    :lastmodtime '(21461 49524 382146 775000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!edward!Documents!blood-bowl!src!main!java!com!edpaget!blood_bowl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

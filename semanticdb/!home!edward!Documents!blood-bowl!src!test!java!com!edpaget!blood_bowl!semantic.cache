@@ -1,0 +1,42 @@
+;; Object blood_bowl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "blood_bowl/"
+  :tables (list 
+   (semanticdb-table "AppTest.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("com.edpaget.blood_bowl" package nil (reparse-symbol package_declaration) [1 32])
+            ("junit.framework.Test" include nil (reparse-symbol import_declaration) [34 62])
+            ("junit.framework.TestCase" include nil (reparse-symbol import_declaration) [63 95])
+            ("junit.framework.TestSuite" include nil (reparse-symbol import_declaration) [96 129])
+            ("AppTest" type
+               (:typemodifiers ("public")
+                :superclasses "TestCase"
+                :members 
+                  ( ("AppTest" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("testName" variable (:type "String") (reparse-symbol formal_parameter) [329 344]))                          )
+                        (reparse-symbol constructor_declaration) [313 385])
+                    ("suite" function
+                       (:typemodifiers ("public" "static")
+                        :type "Test")
+                        (reparse-symbol method_declaration) [454 539])
+                    ("testApp" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol method_declaration) [587 648]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [168 650]))          
+    :file "AppTest.java"
+    :pointmax 651
+    :fsize 650
+    :lastmodtime '(21461 40887 849936 105000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!edward!Documents!blood-bowl!src!test!java!com!edpaget!blood_bowl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
