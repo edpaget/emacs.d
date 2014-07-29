@@ -12,16 +12,13 @@
             (defadvice ruby-mode-set-encoding
               (around ruby-mode-set-encoding-disable activate) nil)))
 
-(require-package 'ruby-electric)
-(add-hook 'ruby-mode-hook 'ruby-electric-mode)
-
 (require-package 'rspec-mode)
 (add-hook 'ruby-mode-hook 'rspec-mode)
 
-(evil-leader/set-key-for-mode 'rspec-mode "v" 'rspec-verify
+(evil-leader/set-key-for-mode 'ruby-mode
+  "v" 'rspec-verify
   "a" 'rspec-verify-all
   "s" 'rspec-toggle-spec-and-target
-  "4s" 'rspec-find-spec-or-target-other-window
   "i" 'rspec-rerun
   "m" 'rspec-verify-matching
   "c" 'rspec-verify-continue)
